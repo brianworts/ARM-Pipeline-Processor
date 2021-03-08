@@ -1,45 +1,42 @@
 `timescale 1ns / 1ps
 
-module alu(
-    input clk,
-    input reset,
+module ALU(
     //Input Data
     input [63:0] inputA, 
     input [63:0] inputB,
     //Control 
     input [3:0] ALUControl,
     //Output Data 
-    output reg [63:0] ALUOutput, //DEBUG: SHOULD BE WIRE?
-    output reg Zero //DEBUG : SHOULD BE WIRE
+    output reg [63:0] ALUOutput, 
+    output reg Zero 
     );
-    
     
     always@(*) begin    //aluc
         //switch statement
         case(ALUControl)
             //case 0000: inputA AND(&) inputB
             4'b0000: begin
-                ALUOutput = inputA & inputB;
+                ALUOutput = #1 inputA & inputB;
             end  
               
             //case 0001: inputA OR(|) inputB
             4'b0001: begin
-                ALUOutput = inputA | inputB;
+                ALUOutput = #1 inputA | inputB;
             end 
             
             //case 0010: inputA add(+) inputB
             4'b0010: begin
-                ALUOutput = inputA + inputB;
+                ALUOutput = #1 inputA + inputB;
             end 
             
             //case 0110: inputA subtract(-) inputB
             4'b0110: begin
-                ALUOutput = inputA - inputB;
+                ALUOutput = #1 inputA - inputB;
             end 
             
             //case 0111: Pass inputB, result = inputB
             4'b0111: begin
-                ALUOutput = inputB;
+                ALUOutput = #1 inputB;
             end 
 
         endcase
@@ -47,10 +44,8 @@ module alu(
     
     always@(*) begin //posedge CKLK
         if(ALUOutput == 0)
-            Zero = 1;
+            Zero = #1 1;
         else
-            Zero = 0;
+            Zero = #1 0;
     end
-    
-    
 endmodule

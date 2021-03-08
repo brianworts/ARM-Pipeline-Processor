@@ -1,15 +1,39 @@
 `timescale 1ns / 1ps
 
-module mux(
+module Mux(
     input clk, 
     input reset,
     
-    input inputA,
-    input inputB,
+    input [63:0] inputA,
+    input [63:0] inputB,
     input selector,
-    output reg outputData
+    output reg [63:0] outputData
     );
     
+    always @(*)
+    //Select data in Mux
+    //Output
+        //outputData
+    begin
+        if(reset)
+        begin
+            #1 outputData = 0;
+        end
+        else
+        begin
+            if (selector)
+            begin
+                #1 outputData = inputB;
+            end
+            else
+            begin
+                #1 outputData = inputA;
+            end
+        end
+    end
+    
+    
+    /*
     always @(posedge clk)
     //Select data in Mux
     //Output
@@ -17,7 +41,7 @@ module mux(
     begin
         if(reset)
         begin
-            outputData <= 32'hXXXXXXXX;
+            outputData <= 0;
         end
         else
         begin
@@ -30,7 +54,7 @@ module mux(
                 outputData <= inputA;
             end
         end
-    end
+    end*/
     
     
 endmodule

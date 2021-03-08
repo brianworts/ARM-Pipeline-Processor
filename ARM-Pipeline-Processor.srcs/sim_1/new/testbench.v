@@ -1,11 +1,12 @@
 `timescale 1ns / 1ps
 
 module testbench();
-    
+    //////////////////////////////////////////
+    //CLK
     reg clk;
     
-    initial
     //Generate Clock
+    initial
     begin
         clk = 0;
         while(1)
@@ -13,25 +14,17 @@ module testbench();
             #5 clk = ~clk;
         end
     end
-    
+    /////////////////////////////////////////////
+    //Reset
     reg reset; //Active Low
     initial
     //Initize reset
     begin
         reset = 1;
-        #10 reset = 0;
+        #5 reset = 0;
     end
+    ////////////////////////////////////////////
     
-    reg [31:0] IM[0:11];
-
-    initial begin
-    //Initialize IM
-        $readmemh("D:/CELab2/ARM-Pipeline-Processor/IM.dat", IM);
-    end
-    
-    wire [31:0] IMOut;
-    wire [31:0] PC;
-    assign IMOut = {IM[PC],IM[PC+1],IM[PC+2],IM[PC+3]};
     
     always @(posedge clk)
     //FRAME
@@ -46,11 +39,52 @@ module testbench();
         end
     end
     
-    datapath u_datapath (
+    wire [63:0] PC;
+    
+    //////////////////////////////////////////////
+    //IM
+    wire [31:0] IMOut;
+    
+    IM u_IM (
+        .PC(PC),
+        .IMOut(IMOut)
+    );
+    //////////////////////////////////////////////
+    //DM
+    wire DMMemWrite;
+    wire DMMemRead;
+    
+    wire [63:0] DMAddress;
+    wire [63:0] DMWriteData;
+    wire [63:0] DMReadData;
+    
+    DM u_DM(
+        .DMMemWrite(DMMemWrite),
+        .DMMemRead(DMMemRead),
+
+        .DMAddress(DMAddress),
+        .DMWriteData(DMWriteData),
+        .DMReadData(DMReadData) 
+    );
+    //////////////////////////////////////////////
+    
+    Datapath u_Datapath (
         .clk(clk),
         .reset(reset),
+        
+        //PC
         .PC(PC),
-        .instruction(IMOut)
+        
+        //IM
+        .IFIMOut(IMOut),
+        
+        //DM
+        .DMMemWrite(DMMemWrite),
+        .DMMemRead(DMMemRead),
+        
+        .DMAddress(DMAddress),
+        .DMWriteData(DMWriteData),
+        .DMReadData(DMReadData)
     );
     
 endmodule

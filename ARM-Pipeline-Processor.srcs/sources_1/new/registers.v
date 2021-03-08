@@ -1,19 +1,19 @@
 `timescale 1ns / 1ps
 
-module registers(
+module Registers(
     input clk,
     input reset,
     //Control value
     input regWrite,
     //Reg locations (64)
-    input [5:0] readRegister1,
-    input [5:0] readRegister2,
-    input [5:0] writeRegister,
+    input [4:0] readRegister1,
+    input [4:0] readRegister2,
+    input [4:0] writeRegister,
     //Data (64)
-    input [5:0] writeData,
+    input [63:0] writeData,
     //Data (64)
-    output [5:0] readData1,
-    output [5:0] readData2    
+    output [63:0] readData1,
+    output [63:0] readData2    
     );
 
     reg [63:0] RM[0:31];
@@ -31,7 +31,7 @@ module registers(
         begin
             if (regWrite)
             begin
-                RM[writeRegister] = writeData;
+                #1 RM[writeRegister] = writeData;
             end
         end
     end

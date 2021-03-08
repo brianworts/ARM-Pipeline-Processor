@@ -1,7 +1,17 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/add.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" \
 "../../../../ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/im.v" \
 "../../../../ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" \
 "../../../../ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" \
 
 # compile glbl module
