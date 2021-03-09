@@ -40,7 +40,7 @@ module Datapath(
     
     Add u_PCAdd(
         .inputA(PC),
-        .inputB(64'd4), //Always add 4
+        .inputB(64'd1), //Always add 1
         .outputData(PCAddOut)
     );
     
@@ -83,13 +83,16 @@ module Datapath(
     wire [63:0] ReadData2; 
     wire [63:0] InsSignExtendOut;
     
+    wire MEMWBRegWriteOut;
+
+    
     Registers u_Registers(
-        .readRegister1(ReadRegister1In),
+        .readRegister1(IFIDIMOut[20:16]),
         .readRegister2(ReadRegister2In),
         .writeRegister(WriteRegister),
         .writeData(RegWriteData),
         
-        .regWrite(0),
+        .regWrite(MEMWBRegWriteOut),
         
         .readData1(ReadData1),
         .readData2(ReadData2)
@@ -97,23 +100,22 @@ module Datapath(
     
     assign #1 InsSignExtendOut = { {32{IFIDIMOut[31] }}, IFIDIMOut[31:0] };
     
-    wire RegWriteControlOut;
-    wire MControlOut; //BITS??
-    wire [1:0] ALUOpControlOut;
-    wire ALUSrcOut;
+    wire [1:0] WBControlOut;
+    wire [2:0] MControlOut; //BITS??
+    wire [2:0] EXControlOut;
+   
     
     Control u_Control(
         .Instruction(IFIDIMOut),
         
-        .RegWrite(RegWriteControlOut),
+        .WB(WBControlOut),
         .M(MControlOut),
-        .ALUOp(ALUOpControlOut),
-        .ALUSrc(ALUSrcOut)
+        .EX(EXControlOut)
     );
     //////////////////////////////////
     //ID/EX
-    wire IDEXRegWriteOut;
-    wire IDEXMOut; //BITS??
+    wire [1:0] IDEXWBControlOut;
+    wire [2:0] IDEXMOut;
     wire [1:0] IDEXALUOpOut;
     wire IDEXALUSrcOut;
     wire [63:0] IDEXPCOut;
@@ -126,18 +128,16 @@ module Datapath(
     ID_EX u_ID_EX(
         .clk(clk),
 
-        .IDEXRegWriteIn(RegWriteControlOut),
-        .IDEXRegWriteOut(IDEXRegWriteOut),
+        .IDEXWBIn(WBControlOut),
+        .IDEXWBOut(IDEXWBControlOut),
         
-        .IDEXBranchIn(MControlOut),
-        .IDEXBranchOut(IDEXMOut),
+        .IDEXMIn(MControlOut),
+        .IDEXMOut(IDEXMOut),
         
-        .IDEXALUOpIn(ALUOpControlOut),
+        .IDEXEXIn(EXControlOut),
         .IDEXALUOpOut(IDEXALUOpOut),
-        
-        .IDEXALUSrcIn(ALUSrcOut),
         .IDEXALUSrcOut(IDEXALUSrcOut),
-        
+
         .IDEXPCIn(IFIDPCOut),
         .IDEXPCOut(IDEXPCOut),
         
@@ -204,18 +204,24 @@ module Datapath(
     );
     //////////////////////////////////
     //EX/MEM
-    wire EXMEMRegWriteOut;
-    wire EXMEMMOut; //BITS???
+    wire [1:0] EXMEMWBOut;
+    wire EXMEMBranchOut;
+    wire EXMEMMemWriteOut;
+    wire EXMEMMemReadOut;
+    
     wire EXMEMALUZeroOut;
     wire [63:0] EXMEMALUResultOut;
     wire [63:0] EXMEMReadData2Out;
     wire [4:0] EXMEMWriteRegisterOut;
      
     EX_MEM u_EX_MEM(
-        .EXMEMRegWriteIn(IDEXRegWriteOut),        
-        .EXMEMRegWriteOut(EXMEMRegWriteOut),        
-        .EXMEMBranchIn(IDEXMOut),
-        .EXMEMBranchOut(EXMEMMOut),
+        .EXMEMWBIn(IDEXWBControlOut),        
+        .EXMEMWBOut(EXMEMWBOut),   
+             
+        .EXMEMMIn(IDEXMOut),
+        .EXMEMBranchOut(EXMEMBranchOut),
+        .EXMEMMemWriteOut(EXMEMMemWriteOut),
+        .EXMEMMemReadOut(EXMEMMemReadOut),
          
         .EXMEMPC2AddIn(PC2AddOut),
         .EXMEMPC2AddOut(EXMEMPCAdd2Out),
@@ -232,14 +238,13 @@ module Datapath(
     );
     //////////////////////////////////
     //MEM
-    assign PCSrc = EXMEMMOut & EXMEMALUZeroOut; //BITS FOR EXMEMMOut????
+    assign PCSrc = EXMEMBranchOut & EXMEMALUZeroOut;
     assign DMAddress = EXMEMALUResultOut;
     assign DMWriteData = EXMEMReadData2Out;
-    assign DMMemWrite = EXMEMMOut; //BITS????
-    assign DMMemRead = EXMEMMOut; //BITS????
+    assign DMMemWrite = EXMEMMemWriteOut; 
+    assign DMMemRead = EXMEMMemReadOut; 
     //////////////////////////////////
     //MEM/WB
-    wire MEMWBRegWriteOut;
     wire MemToRegOut;
     wire [63:0] MEMWBDMReadDataOut;
     wire [63:0] MEMWBALUResultOut;
@@ -249,8 +254,9 @@ module Datapath(
     MEM_WB u_MEM_WB(
         .clk(clk),
     
-        .MEMWBRegWriteIn(EXMEMRegWriteOut),
+        .MEMWBWBIn(EXMEMWBOut),
         .MEMWBRegWriteOut(MEMWBRegWriteOut),
+        .MEMWBMemToRegOut(MemToRegOut),
         
         .MEMWBDMReadDataIn(DMReadData),
         .MEMWBDMReadDataOut(MEMWBDMReadDataOut),
@@ -266,7 +272,7 @@ module Datapath(
     Mux u_WBMux( 
         .inputA(MEMWBALUResultOut), //Memtoreg=0
         .inputB(MEMWBDMReadDataOut),
-        .selector(MemToRegOut), //D
+        .selector(MemToRegOut),
         .outputData(RegWriteData)
     );
     assign WriteRegister = MEMWBWriteRegisterOut;

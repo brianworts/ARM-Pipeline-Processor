@@ -4,9 +4,9 @@ May 24 2019
 15:06:07
 D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
 D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v,1614716940,verilog,,,,testbench,,,,,,,,
-D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v,1615148953,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v,,ALUControl,,,,,,,,
-D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v,1615242243,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v,,Control,,,,,,,,
-D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v,1615245176,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v,,EX_MEM,,,,,,,,
+D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v,1615323422,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v,,ALUControl,,,,,,,,
+D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v,1615322910,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v,,Control,,,,,,,,
+D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v,1615321664,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v,,EX_MEM,,,,,,,,
 D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v,1615180755,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v,,ID_EX,,,,,,,,
 D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v,1615066118,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v,,IF_ID,,,,,,,,
 D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v,1615244816,verilog,,D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v,,MEM_WB,,,,,,,,

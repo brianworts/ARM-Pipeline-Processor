@@ -4,8 +4,9 @@
 module MEM_WB(
     input clk,
     
-    input MEMWBRegWriteIn,
+    input [1:0] MEMWBWBIn,
     output reg MEMWBRegWriteOut,
+    output reg MEMWBMemToRegOut,
     
     input [63:0] MEMWBDMReadDataIn,
     output reg [63:0] MEMWBDMReadDataOut,
@@ -19,7 +20,9 @@ module MEM_WB(
     
     always @ (posedge clk)
     begin
-        MEMWBRegWriteOut <= MEMWBRegWriteIn;
+        MEMWBRegWriteOut <= MEMWBWBIn[1];
+        MEMWBMemToRegOut <= MEMWBWBIn[0];
+        
         MEMWBDMReadDataOut <= MEMWBDMReadDataIn;
         MEMWBALUResultOut <= MEMWBALUResultIn;
         MEMWBWriteRegisterOut <= MEMWBWriteRegisterIn;

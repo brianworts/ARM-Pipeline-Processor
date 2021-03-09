@@ -12,6 +12,6 @@ module IM(
         $readmemh("D:/CELab2/ARM-Pipeline-Processor/IM.dat", IM);
     end
     
-    assign #1 IMOut = {IM[PC],IM[PC+1],IM[PC+2],IM[PC+3]};
+    assign #1 IMOut = {IM[PC]};
     
 endmodule

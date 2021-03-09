@@ -3,13 +3,15 @@
 module EX_MEM(
     input clk,
 
-    input EXMEMRegWriteIn,        
-    output reg EXMEMRegWriteOut,        
-    input EXMEMBranchIn,
+    input [1:0] EXMEMWBIn,        
+    output reg [1:0] EXMEMWBOut,        
+    input [2:0] EXMEMMIn,
     output reg EXMEMBranchOut,
+    output reg EXMEMMemWriteOut,
+    output reg EXMEMMemReadOut,
      
-    input EXMEMPC2AddIn,
-    output reg EXMEMPC2AddOut,
+    input [63:0] EXMEMPC2AddIn,
+    output reg [63:0] EXMEMPC2AddOut,
     
     input EXMEMALUZeroIn,
     output reg EXMEMALUZeroOut,
@@ -24,8 +26,12 @@ module EX_MEM(
     
     always @(posedge clk)
     begin
-        EXMEMRegWriteOut <= EXMEMRegWriteIn;
-        EXMEMBranchOut <= EXMEMBranchIn;
+        EXMEMWBOut <= EXMEMWBIn;
+        
+        EXMEMBranchOut <= EXMEMMIn[2];
+        EXMEMMemWriteOut <= EXMEMMIn[0];
+        EXMEMMemReadOut <= EXMEMMIn[1];
+        
         EXMEMPC2AddOut <= EXMEMPC2AddIn;
         EXMEMALUZeroOut <= EXMEMALUZeroIn;
         EXMEMALUResultOut <= EXMEMALUResultIn;

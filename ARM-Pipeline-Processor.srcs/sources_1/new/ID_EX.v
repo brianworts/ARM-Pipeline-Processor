@@ -3,20 +3,18 @@
 module ID_EX(
     input clk,
 
-    input IDEXRegWriteIn,
-    output reg IDEXRegWriteOut,
+    input [1:0] IDEXWBIn,
+    output reg [1:0] IDEXWBOut,
     
-    input IDEXBranchIn,
-    output reg IDEXBranchOut,
+    input [2:0] IDEXMIn,
+    output reg [2:0] IDEXMOut,
     
-    input [1:0] IDEXALUOpIn,
+    input [2:0] IDEXEXIn,
     output reg [1:0] IDEXALUOpOut,
-    
-    input IDEXALUSrcIn,
     output reg IDEXALUSrcOut,
     
-    input IDEXPCIn,
-    output reg IDEXPCOut,
+    input [63:0] IDEXPCIn,
+    output reg [63:0] IDEXPCOut,
     
     input [63:0] IDEXReadData1In,
     output reg [63:0] IDEXReadData1Out,
@@ -36,9 +34,11 @@ module ID_EX(
     
     always @(posedge clk)
     begin
-        IDEXRegWriteOut <= IDEXRegWriteIn;
-        IDEXBranchOut <= IDEXBranchIn;
-        IDEXALUOpOut <= IDEXALUOpIn;
+        IDEXWBOut <= IDEXWBIn;
+        IDEXMOut <= IDEXMIn;
+        IDEXALUOpOut <= IDEXEXIn[2:1];
+        IDEXALUSrcOut <= IDEXEXIn[0];
+        
         IDEXPCOut <= IDEXPCIn;
         IDEXReadData1Out <= IDEXReadData1In;
         IDEXReadData2Out <= IDEXReadData2In;

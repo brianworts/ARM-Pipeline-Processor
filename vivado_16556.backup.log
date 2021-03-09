@@ -1,0 +1,1831 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Mar  6 16:01:37 2021
+# Process ID: 16556
+# Current directory: D:/CELab2/ARM-Pipeline-Processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14668 D:\CELab2\ARM-Pipeline-Processor\ARM-Pipeline-Processor.xpr
+# Log file: D:/CELab2/ARM-Pipeline-Processor/vivado.log
+# Journal file: D:/CELab2/ARM-Pipeline-Processor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 691.051 ; gain = 54.082
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'IfIDIMOut' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:85]
+ERROR: [VRFC 10-3180] cannot find port 'IfIdPCOut' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:83]
+ERROR: [VRFC 10-3180] cannot find port 'PC' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:82]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Mar  6 16:29:30 2021. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Mar  6 16:29:30 2021...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 742.172 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 763.785 ; gain = 21.613
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 775.301 ; gain = 0.000
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 775.301 ; gain = 0.000
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 775.301 ; gain = 0.000
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 782.664 ; gain = 0.000
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+update_compile_order -fileset sources_1
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 787.723 ; gain = 5.059
+update_compile_order -fileset sources_1
+close [ open D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v w ]
+add_files D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 806.352 ; gain = 0.000
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 806.352 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+ERROR: [VRFC 10-3180] cannot find port 'Instruction' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:126]
+ERROR: [VRFC 10-3180] cannot find port 'RegWrite' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:128]
+ERROR: [VRFC 10-3180] cannot find port 'Branch' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:129]
+ERROR: [VRFC 10-3180] cannot find port 'ALUOp' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:130]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'ALUOp' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:130]
+ERROR: [VRFC 10-3180] cannot find port 'Branch' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:129]
+ERROR: [VRFC 10-3180] cannot find port 'RegWrite' on this module [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:128]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:126]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 806.352 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:126]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:165]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData1In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:168]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData1Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:169]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:171]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:172]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXSignExtendOutOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:175]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'IDEXOpcodeOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:178]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 'IDEXWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:181]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 806.352 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 806.352 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:126]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:165]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData1In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:168]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData1Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:169]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:171]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:172]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXSignExtendOutOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:175]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'IDEXOpcodeOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:178]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 'IDEXWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:181]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 806.352 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ShiftLeftTwo.v] -no_script -reset -force -quiet
+remove_files  D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ShiftLeftTwo.v
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v w ]
+add_files D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'DMAddress' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'selector' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:108]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:109]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'writeRegister' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:110]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'writeData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:111]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:113]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData1' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:115]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'readData2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:116]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:126]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'ALUOp' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:130]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'IDEXALUOpIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:154]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:158]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:159]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData1In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:161]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'IDEXReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:164]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 843.957 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 872.961 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:101]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:119]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:154]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:155]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:233]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:234]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:238]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:239]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:241]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:242]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:243]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:244]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:86]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:87]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:89]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Mar  8 19:59:53 2021. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar  8 19:59:53 2021...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 872.961 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+WARNING: Simulation object /testbench/u_Datapath/WriteData was not found in the design.
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 878.609 ; gain = 5.648
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:101]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:119]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:154]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:155]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:233]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:234]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:238]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:239]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:241]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:242]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:243]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:244]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:86]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:87]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:89]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1006.582 ; gain = 0.000
+add_bp {D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v} 30
+remove_bps -file {D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v} -line 30
+add_bp {D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v} 30
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:101]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:119]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:154]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:155]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:233]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:234]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:238]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:239]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:241]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:242]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:243]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:244]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:86]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:87]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:89]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+Stopped at time : 0 fs : File "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" Line 30
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1006.582 ; gain = 0.000
+remove_bps -file {D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v} -line 30
+run all
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.582 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:101]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:119]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:154]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:155]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:233]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:234]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:238]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:239]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:241]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:242]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:243]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:244]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:86]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:87]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:89]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1006.582 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:101]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:119]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:154]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:155]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:233]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:234]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:238]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:239]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:241]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:242]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:243]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:244]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:86]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:87]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:89]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1006.582 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:88]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:92]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:106]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:141]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:142]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:220]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:221]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:225]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:226]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:228]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:229]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:230]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:231]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:73]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:74]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:76]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1006.582 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/dm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.sim/sim_1/behav/xsim'
+"xelab -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 415f347581a647f1a1f997d4d2decdd0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'readRegister2' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:86]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'regWrite' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:90]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Instruction' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:104]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:139]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'IDEXPCOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:140]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:218]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMPC2AddOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:219]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:223]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMALUResultOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:224]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2In' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:226]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEMReadData2Out' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:227]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterIn' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:228]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 1 for port 'EXMEMWriteRegisterOut' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:229]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputA' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:71]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'inputB' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:72]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 64 for port 'outputData' [D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.srcs/sources_1/new/datapath.v:74]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Add
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ERROR: Out of bounds address specified in datafile. Read terminated.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1006.582 ; gain = 0.000
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  8 20:58:50 2021...
