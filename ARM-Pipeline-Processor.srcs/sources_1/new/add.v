@@ -14,7 +14,7 @@ module Add(
     begin
         if (reset)
         begin
-            #1 outputData = 0;
+           // #1 outputData = 0;
         end
         else
         begin

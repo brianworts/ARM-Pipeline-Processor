@@ -12,17 +12,18 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="61705698fs"></ZoomEndTime>
-      <Cursor1Time time="23254000fs"></Cursor1Time>
+      <ZoomEndTime time="60327981fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="109"></NameColumnWidth>
-      <ValueColumnWidth column_width="139"></ValueColumnWidth>
+      <NameColumnWidth column_width="186"></NameColumnWidth>
+      <ValueColumnWidth column_width="135"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="30" />
+   <WVObjectSize size="18" />
    <wvobject type="divider" fp_name="divider51">
       <obj_property name="label">TestBench</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#0000A0</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -32,112 +33,65 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
+   <wvobject type="divider" fp_name="divider200">
+      <obj_property name="label">DataPath</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#800080</obj_property>
+   </wvobject>
    <wvobject type="divider" fp_name="divider52">
-      <obj_property name="label">PC</obj_property>
+      <obj_property name="label">IF</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/u_PC/PC" type="array">
+   <wvobject fp_name="/testbench/u_Datapath/PC" type="array">
       <obj_property name="ElementShortName">PC[63:0]</obj_property>
       <obj_property name="ObjectShortName">PC[63:0]</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider53">
-      <obj_property name="label">IM</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/IMOut" type="array">
       <obj_property name="ElementShortName">IMOut[31:0]</obj_property>
       <obj_property name="ObjectShortName">IMOut[31:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider54">
-      <obj_property name="label">IF/ID</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/IFIDPCOut" type="array">
-      <obj_property name="ElementShortName">IFIDPCOut[63:0]</obj_property>
-      <obj_property name="ObjectShortName">IFIDPCOut[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/IFIDIMOut" type="array">
-      <obj_property name="ElementShortName">IFIDIMOut[31:0]</obj_property>
-      <obj_property name="ObjectShortName">IFIDIMOut[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider54">
       <obj_property name="label">ID</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/ReadRegister2In" type="array">
-      <obj_property name="ElementShortName">ReadRegister2In[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ReadRegister2In[7:0]</obj_property>
+   <wvobject fp_name="/testbench/u_Datapath/u_Registers/readRegister1" type="array">
+      <obj_property name="ElementShortName">readRegister1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">readRegister1[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/ReadRegister1In" type="array">
-      <obj_property name="ElementShortName">ReadRegister1In[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ReadRegister1In[7:0]</obj_property>
+   <wvobject fp_name="/testbench/u_Datapath/u_Registers/readRegister2" type="array">
+      <obj_property name="ElementShortName">readRegister2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">readRegister2[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/WriteRegister" type="logic">
-      <obj_property name="ElementShortName">WriteRegister</obj_property>
-      <obj_property name="ObjectShortName">WriteRegister</obj_property>
+   <wvobject fp_name="/testbench/u_Datapath/u_Registers/writeRegister" type="array">
+      <obj_property name="ElementShortName">writeRegister[4:0]</obj_property>
+      <obj_property name="ObjectShortName">writeRegister[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/WriteData" type="logic">
-      <obj_property name="ElementShortName">WriteData</obj_property>
-      <obj_property name="ObjectShortName">WriteData</obj_property>
+   <wvobject fp_name="/testbench/u_Datapath/u_Registers/writeData" type="array">
+      <obj_property name="ElementShortName">writeData[63:0]</obj_property>
+      <obj_property name="ObjectShortName">writeData[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/InsSignExtendOut" type="array">
-      <obj_property name="ElementShortName">InsSignExtendOut[63:0]</obj_property>
-      <obj_property name="ObjectShortName">InsSignExtendOut[63:0]</obj_property>
+   <wvobject fp_name="/testbench/u_Datapath/u_Registers/readData1" type="array">
+      <obj_property name="ElementShortName">readData1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">readData1[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/ReadData1" type="logic">
-      <obj_property name="ElementShortName">ReadData1</obj_property>
-      <obj_property name="ObjectShortName">ReadData1</obj_property>
+   <wvobject fp_name="/testbench/u_Datapath/u_Registers/readData2" type="array">
+      <obj_property name="ElementShortName">readData2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">readData2[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/ReadData2" type="logic">
-      <obj_property name="ElementShortName">ReadData2</obj_property>
-      <obj_property name="ObjectShortName">ReadData2</obj_property>
+   <wvobject fp_name="/testbench/u_Datapath/u_Registers/RM" type="array">
+      <obj_property name="ElementShortName">RM[0:31][63:0]</obj_property>
+      <obj_property name="ObjectShortName">RM[0:31][63:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider54">
       <obj_property name="label">EX</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/u_ID_EX/IDEXReadData1Out" type="array">
-      <obj_property name="ElementShortName">IDEXReadData1Out[63:0]</obj_property>
-      <obj_property name="ObjectShortName">IDEXReadData1Out[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/u_ID_EX/IDEXReadData2Out" type="array">
-      <obj_property name="ElementShortName">IDEXReadData2Out[63:0]</obj_property>
-      <obj_property name="ObjectShortName">IDEXReadData2Out[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/u_ID_EX/IDEXSignExtendOutOut" type="array">
-      <obj_property name="ElementShortName">IDEXSignExtendOutOut[63:0]</obj_property>
-      <obj_property name="ObjectShortName">IDEXSignExtendOutOut[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/u_ID_EX/IDEXOpcodeOut" type="array">
-      <obj_property name="ElementShortName">IDEXOpcodeOut[10:0]</obj_property>
-      <obj_property name="ObjectShortName">IDEXOpcodeOut[10:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/u_ID_EX/IDEXWriteRegisterOut" type="array">
-      <obj_property name="ElementShortName">IDEXWriteRegisterOut[4:0]</obj_property>
-      <obj_property name="ObjectShortName">IDEXWriteRegisterOut[4:0]</obj_property>
-   </wvobject>
    <wvobject type="divider" fp_name="divider54">
-      <obj_property name="label">DM</obj_property>
+      <obj_property name="label">MEM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/DMMemWrite" type="logic">
-      <obj_property name="ElementShortName">DMMemWrite</obj_property>
-      <obj_property name="ObjectShortName">DMMemWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/DMMemRead" type="logic">
-      <obj_property name="ElementShortName">DMMemRead</obj_property>
-      <obj_property name="ObjectShortName">DMMemRead</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/DMAddress" type="array">
-      <obj_property name="ElementShortName">DMAddress[63:0]</obj_property>
-      <obj_property name="ObjectShortName">DMAddress[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/DMWriteData" type="array">
-      <obj_property name="ElementShortName">DMWriteData[63:0]</obj_property>
-      <obj_property name="ObjectShortName">DMWriteData[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/DMReadData" type="array">
-      <obj_property name="ElementShortName">DMReadData[63:0]</obj_property>
-      <obj_property name="ObjectShortName">DMReadData[63:0]</obj_property>
+   <wvobject type="divider" fp_name="divider54">
+      <obj_property name="label">WB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
 </wave_config>

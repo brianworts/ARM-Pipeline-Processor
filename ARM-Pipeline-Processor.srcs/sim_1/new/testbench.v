@@ -21,7 +21,7 @@ module testbench();
     //Initize reset
     begin
         reset = 1;
-        #5 reset = 0;
+        #20 reset = 0;
     end
     ////////////////////////////////////////////
     

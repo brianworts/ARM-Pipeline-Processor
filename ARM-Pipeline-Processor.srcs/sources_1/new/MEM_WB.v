@@ -1,26 +1,28 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/04/2021 09:39:46 PM
-// Design Name: 
-// Module Name: MEM_WB
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module MEM_WB(
-
+    input clk,
+    
+    input MEMWBRegWriteIn,
+    output reg MEMWBRegWriteOut,
+    
+    input [63:0] MEMWBDMReadDataIn,
+    output reg [63:0] MEMWBDMReadDataOut,
+    
+    input [63:0] MEMWBALUResultIn,
+    output reg [63:0] MEMWBALUResultOut,
+    
+    input [4:0] MEMWBWriteRegisterIn,
+    output reg [4:0] MEMWBWriteRegisterOut
     );
+    
+    always @ (posedge clk)
+    begin
+        MEMWBRegWriteOut <= MEMWBRegWriteIn;
+        MEMWBDMReadDataOut <= MEMWBDMReadDataIn;
+        MEMWBALUResultOut <= MEMWBALUResultIn;
+        MEMWBWriteRegisterOut <= MEMWBWriteRegisterIn;
+    end
+    
 endmodule
