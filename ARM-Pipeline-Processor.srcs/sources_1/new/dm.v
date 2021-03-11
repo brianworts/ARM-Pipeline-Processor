@@ -9,7 +9,7 @@ module DM(
         output [63:0] DMReadData 
     );
     
-    reg [63:0] DM[0:11];
+    reg [63:0] DM[31:0];
 
     initial begin
     //Initialize IM

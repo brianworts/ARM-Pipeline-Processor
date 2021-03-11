@@ -36,7 +36,7 @@ module ALU(
             
             //case 0111: Pass inputB, result = inputB
             4'b0111: begin
-                ALUOutput = #1 inputB;
+                ALUOutput = #1 inputB; //For CBZ
             end 
 
         endcase

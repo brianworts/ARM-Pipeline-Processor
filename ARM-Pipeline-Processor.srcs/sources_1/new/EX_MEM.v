@@ -15,13 +15,13 @@ module EX_MEM(
     
     input EXMEMALUZeroIn,
     output reg EXMEMALUZeroOut,
-    input EXMEMALUResultIn,
-    output reg EXMEMALUResultOut,
+    input [63:0] EXMEMALUResultIn,
+    output reg [63:0] EXMEMALUResultOut,
     
-    input EXMEMReadData2In,
-    output reg EXMEMReadData2Out,
-    input EXMEMWriteRegisterIn,
-    output reg EXMEMWriteRegisterOut
+    input [63:0] EXMEMReadData2In,
+    output reg [63:0] EXMEMReadData2Out,
+    input [4:0] EXMEMWriteRegisterIn,
+    output reg [4:0] EXMEMWriteRegisterOut
     );
     
     always @(posedge clk)

@@ -40,7 +40,7 @@ module Datapath(
     
     Add u_PCAdd(
         .inputA(PC),
-        .inputB(64'd1), //Always add 1
+        .inputB(64'd4), //Always add 4
         .outputData(PCAddOut)
     );
     
@@ -66,12 +66,16 @@ module Datapath(
     );
     //////////////////////////////////
     //ID
-    wire [4:0] ReadRegister2In; //debug num bits??
+    wire [4:0] ReadRegister2In;
+    wire [4:0] Reg2MuxAIn;
+    wire [4:0] Reg2MuxBIn;
     wire Reg2Loc;
     assign Reg2Loc = IFIDIMOut[28];
+    assign Reg2MuxAIn = IFIDIMOut[20:16];
+    assign Reg2MuxBIn = IFIDIMOut[4:0];
     Mux u_RegsMux(
-        .inputA(IFIDIMOut[9:5]), //DEBUG BITS?
-        .inputB(IFIDIMOut), //DEBUG BITS?
+        .inputA(Reg2MuxAIn),
+        .inputB(Reg2MuxBIn),
         .selector(Reg2Loc), 
         .outputData(ReadRegister2In)
     );
@@ -87,7 +91,7 @@ module Datapath(
 
     
     Registers u_Registers(
-        .readRegister1(IFIDIMOut[20:16]),
+        .readRegister1(IFIDIMOut[9:5]),
         .readRegister2(ReadRegister2In),
         .writeRegister(WriteRegister),
         .writeData(RegWriteData),
@@ -101,7 +105,7 @@ module Datapath(
     assign #1 InsSignExtendOut = { {32{IFIDIMOut[31] }}, IFIDIMOut[31:0] };
     
     wire [1:0] WBControlOut;
-    wire [2:0] MControlOut; //BITS??
+    wire [2:0] MControlOut;
     wire [2:0] EXControlOut;
    
     
@@ -163,8 +167,8 @@ module Datapath(
     reg [63:0] IDEXSignExtendOutOutShifted;
     always @(*)
     begin
-            IDEXSignExtendOutOutShifted = #1 (IDEXSignExtendOutOut << 2);
-    end
+            IDEXSignExtendOutOutShifted = #1 (IDEXSignExtendOutOut[20:12] << 2);
+    end //DEBUG BITS???????????????????????????
     
     Add u_PCAdd2(
         .inputA(IDEXPCOut),
@@ -176,7 +180,7 @@ module Datapath(
     wire [63:0] ALUMuxOut;
     Mux u_ALUMux(
         .inputA(IDEXReadData2Out),
-        .inputB(IDEXSignExtendOutOut),
+        .inputB(IDEXSignExtendOutOut),//DEBUG BITS???????????????????????????
         .selector(IDEXALUSrcOut),
         .outputData(ALUMuxOut)
     );
@@ -215,6 +219,8 @@ module Datapath(
     wire [4:0] EXMEMWriteRegisterOut;
      
     EX_MEM u_EX_MEM(
+        .clk(clk),
+    
         .EXMEMWBIn(IDEXWBControlOut),        
         .EXMEMWBOut(EXMEMWBOut),   
              
@@ -270,7 +276,7 @@ module Datapath(
     //////////////////////////////////
     //WB
     Mux u_WBMux( 
-        .inputA(MEMWBALUResultOut), //Memtoreg=0
+        .inputA(MEMWBALUResultOut),
         .inputB(MEMWBDMReadDataOut),
         .selector(MemToRegOut),
         .outputData(RegWriteData)

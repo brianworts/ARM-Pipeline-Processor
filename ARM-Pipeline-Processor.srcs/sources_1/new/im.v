@@ -5,13 +5,14 @@ module IM(
         output [31:0] IMOut
     );
     
-    reg [31:0] IM[0:11];
+    reg [31:0] IM[31:0];
 
-    initial begin
+    initial 
+    begin
     //Initialize IM
         $readmemh("D:/CELab2/ARM-Pipeline-Processor/IM.dat", IM);
     end
     
-    assign #1 IMOut = {IM[PC]};
+    assign #1 IMOut = IM[PC];
     
 endmodule

@@ -16,7 +16,15 @@ module Registers(
     output [63:0] readData2    
     );
 
-    reg [63:0] RM[0:31];
+    reg [63:0] RM[31:0];
+    
+    initial 
+    begin
+        $readmemh("D:/CELab2/ARM-Pipeline-Processor/RM.dat", RM);
+    end
+    
+    assign readData1 = RM[readRegister1];
+    assign readData2 = RM[readRegister2];
     
     always @(*)
     begin
