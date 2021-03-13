@@ -164,13 +164,13 @@ module Datapath(
     //////////////////////////////////
     //EX
     wire [63:0] PC2AddOut;
-    reg [63:0] IDEXSignExtendOutOutShifted;
+    reg [20:0] IDEXSignExtendOutOutShifted;
     always @(*)
     begin
-            IDEXSignExtendOutOutShifted = #1 (IDEXSignExtendOutOut[20:12] << 2);
-    end //DEBUG BITS???????????????????????????
+            IDEXSignExtendOutOutShifted = #1 (IDEXSignExtendOutOut[23:5] << 2);
+    end
     
-    Add u_PCAdd2(
+    BranchAdd u_BranchAdd(
         .inputA(IDEXPCOut),
         .inputB(IDEXSignExtendOutOutShifted), //Shift Left 2
         
@@ -200,6 +200,8 @@ module Datapath(
         //Input Data
         .inputA(IDEXReadData1Out), 
         .inputB(ALUMuxOut),
+        //ALUOp
+        .ALUOp(IDEXALUOpOut),
         //Control 
         .ALUControl(ALUControlOut),
         //Output Data 

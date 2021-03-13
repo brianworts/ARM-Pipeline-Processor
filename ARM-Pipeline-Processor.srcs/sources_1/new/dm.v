@@ -18,4 +18,11 @@ module DM(
     
     assign DMReadData = DM[DMAddress];
     
+    always @(*)
+    begin
+        if (DMMemWrite)
+        begin
+            DM[DMAddress] = DMWriteData;
+        end
+    end
 endmodule

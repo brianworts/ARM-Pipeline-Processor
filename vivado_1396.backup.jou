@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Mar 10 16:41:29 2021
+# Process ID: 1396
+# Current directory: D:/CELab2/ARM-Pipeline-Processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13988 D:\CELab2\ARM-Pipeline-Processor\ARM-Pipeline-Processor.xpr
+# Log file: D:/CELab2/ARM-Pipeline-Processor/vivado.log
+# Journal file: D:/CELab2/ARM-Pipeline-Processor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CELab2/ARM-Pipeline-Processor/ARM-Pipeline-Processor.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg
+source testbench.tcl
+save_wave_config {D:/CELab2/ARM-Pipeline-Processor/testbench_behav.wcfg}
+close_sim

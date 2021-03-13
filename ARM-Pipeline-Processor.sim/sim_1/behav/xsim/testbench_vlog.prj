@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../ARM-Pipeline-Processor.srcs/sources_1/new/ALUControl.v" \
+"../../../../ARM-Pipeline-Processor.srcs/sources_1/new/BranchAdd.v" \
 "../../../../ARM-Pipeline-Processor.srcs/sources_1/new/Control.v" \
 "../../../../ARM-Pipeline-Processor.srcs/sources_1/new/EX_MEM.v" \
 "../../../../ARM-Pipeline-Processor.srcs/sources_1/new/ID_EX.v" \

@@ -4,12 +4,32 @@ module ALU(
     //Input Data
     input [63:0] inputA, 
     input [63:0] inputB,
+    //ALUOP(debug)
+    input [1:0] ALUOp,
     //Control 
     input [3:0] ALUControl,
     //Output Data 
     output reg [63:0] ALUOutput, 
     output reg Zero 
     );
+    
+    reg [63:0] addInputB;
+    
+    wire [9:0] DebugInputB;
+    assign DebugInputB = addInputB;
+    
+    always @(*)
+    begin
+        case(ALUOp)
+            2'b00: begin
+                addInputB = inputB[20:12];
+            end  
+              
+            default: begin
+                addInputB = inputB;
+            end 
+        endcase
+    end
     
     always@(*) begin    //aluc
         //switch statement
@@ -26,7 +46,7 @@ module ALU(
             
             //case 0010: inputA add(+) inputB
             4'b0010: begin
-                ALUOutput = #1 inputA + inputB;
+                ALUOutput = #1 inputA + addInputB;
             end 
             
             //case 0110: inputA subtract(-) inputB

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="47619555fs"></ZoomEndTime>
-      <Cursor1Time time="25287000fs"></Cursor1Time>
+      <ZoomStartTime time="12500fs"></ZoomStartTime>
+      <ZoomEndTime time="145001fs"></ZoomEndTime>
+      <Cursor1Time time="115700fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="186"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <ValueColumnWidth column_width="87"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="44" />
+   <WVObjectSize size="46" />
    <wvobject type="divider" fp_name="divider51">
       <obj_property name="label">TestBench</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -45,6 +45,7 @@
    <wvobject fp_name="/testbench/u_Datapath/PC" type="array">
       <obj_property name="ElementShortName">PC[63:0]</obj_property>
       <obj_property name="ObjectShortName">PC[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/IMOut" type="array">
       <obj_property name="ElementShortName">IMOut[31:0]</obj_property>
@@ -93,6 +94,7 @@
    <wvobject fp_name="/testbench/u_Datapath/u_Registers/RM" type="array">
       <obj_property name="ElementShortName">RM[31:0][63:0]</obj_property>
       <obj_property name="ObjectShortName">RM[31:0][63:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Datapath/Reg2Loc" type="logic">
       <obj_property name="ElementShortName">Reg2Loc</obj_property>
@@ -115,8 +117,9 @@
       <obj_property name="ObjectShortName">IDEXSignExtendOutOut[63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Datapath/IDEXSignExtendOutOutShifted" type="array">
-      <obj_property name="ElementShortName">IDEXSignExtendOutOutShifted[63:0]</obj_property>
-      <obj_property name="ObjectShortName">IDEXSignExtendOutOutShifted[63:0]</obj_property>
+      <obj_property name="ElementShortName">IDEXSignExtendOutOutShifted[20:0]</obj_property>
+      <obj_property name="ObjectShortName">IDEXSignExtendOutOutShifted[20:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Datapath/ALUMuxOut" type="array">
       <obj_property name="ElementShortName">ALUMuxOut[63:0]</obj_property>
@@ -125,15 +128,19 @@
    <wvobject fp_name="/testbench/u_Datapath/ALUResult" type="array">
       <obj_property name="ElementShortName">ALUResult[63:0]</obj_property>
       <obj_property name="ObjectShortName">ALUResult[63:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Datapath/PC2AddOut" type="array">
       <obj_property name="ElementShortName">PC2AddOut[63:0]</obj_property>
       <obj_property name="ObjectShortName">PC2AddOut[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Datapath/ALUZeroOut" type="logic">
       <obj_property name="ElementShortName">ALUZeroOut</obj_property>
       <obj_property name="ObjectShortName">ALUZeroOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Datapath/u_ALUMux/selector" type="logic">
+      <obj_property name="ElementShortName">selector</obj_property>
+      <obj_property name="ObjectShortName">selector</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider54">
       <obj_property name="label">MEM</obj_property>
@@ -151,10 +158,6 @@
       <obj_property name="ElementShortName">DMAddress[63:0]</obj_property>
       <obj_property name="ObjectShortName">DMAddress[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_DM/DM" type="array">
-      <obj_property name="ElementShortName">DM[31:0][63:0]</obj_property>
-      <obj_property name="ObjectShortName">DM[31:0][63:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/u_Datapath/EXMEMPCAdd2Out" type="array">
       <obj_property name="ElementShortName">EXMEMPCAdd2Out[63:0]</obj_property>
       <obj_property name="ObjectShortName">EXMEMPCAdd2Out[63:0]</obj_property>
@@ -163,6 +166,10 @@
       <obj_property name="ElementShortName">EXMEMALUZeroOut</obj_property>
       <obj_property name="ObjectShortName">EXMEMALUZeroOut</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/u_Datapath/EXMEMMemWriteOut" type="logic">
+      <obj_property name="ElementShortName">EXMEMMemWriteOut</obj_property>
+      <obj_property name="ObjectShortName">EXMEMMemWriteOut</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/u_Datapath/EXMEMBranchOut" type="logic">
       <obj_property name="ElementShortName">EXMEMBranchOut</obj_property>
       <obj_property name="ObjectShortName">EXMEMBranchOut</obj_property>
@@ -170,6 +177,15 @@
    <wvobject fp_name="/testbench/u_Datapath/PCSrc" type="logic">
       <obj_property name="ElementShortName">PCSrc</obj_property>
       <obj_property name="ObjectShortName">PCSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Datapath/u_MEM_WB/MEMWBDMReadDataIn" type="array">
+      <obj_property name="ElementShortName">MEMWBDMReadDataIn[63:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMWBDMReadDataIn[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_DM/DM" type="array">
+      <obj_property name="ElementShortName">DM[31:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">DM[31:0][63:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider54">
       <obj_property name="label">WB</obj_property>
@@ -194,9 +210,5 @@
    <wvobject fp_name="/testbench/u_Datapath/RegWriteData" type="array">
       <obj_property name="ElementShortName">RegWriteData[63:0]</obj_property>
       <obj_property name="ObjectShortName">RegWriteData[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Datapath/u_MEM_WB/MEMWBDMReadDataIn" type="array">
-      <obj_property name="ElementShortName">MEMWBDMReadDataIn[63:0]</obj_property>
-      <obj_property name="ObjectShortName">MEMWBDMReadDataIn[63:0]</obj_property>
    </wvobject>
 </wave_config>

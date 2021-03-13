@@ -4,10 +4,10 @@ module Add(
     input clk,
     input reset,
     
-    input signed [63:0] inputA,
-    input signed [63:0] inputB,
+    input [63:0] inputA,
+    input [63:0] inputB,
     
-    output reg signed [63:0] outputData
+    output reg [63:0] outputData
     );
     
     always @(*)
